@@ -1,0 +1,28 @@
+
+public class SimpleLoop 
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		// calls on the method 
+		countSomeNums();
+	}
+/**
+ * this method runs a for loop that identifies an int i= -4 and then adds 18 everytime 
+ * it runs as long as i is less than or equal to 86
+ * everytime the loop runs it prints out whatever i is equal to 
+ */
+	private static void countSomeNums() 
+	{
+		// TODO Auto-generated method stub
+		//declares int i as -4
+		int i =-4;
+		// sets the condition to run as long as i is less then or equal to 86, then adds 18 everytime it loops
+		for (; i<=86; i+=18)
+		{
+			//prints out i 
+		System.out.println(i);
+		}
+	}
+}
