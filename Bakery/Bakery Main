@@ -20,17 +20,25 @@ public class BakeryMain
 		
 		//instantiate first baked good, a pie 
 		
-		Pie myFirstPie = new Pie("Key Lime");
+		//Pie myFirstPie = new Pie("Key Lime");
 		
-		Pie mySecondPie = new Pie("peepeepoopoo");
+		//Pie mySecondPie = new Pie("peepeepoopoo");
 		//testing if tell yummy method works 
 		//myFirstPie.tellMeIfYummy();
+
+		// instantiation of a new cake object called myFirstCake
 		Cake myFirstCake = new Cake("apple", 1);
+		// invokes the getFlavor Method
 		myFirstCake.getFlavor();
+		// invokes the getLayers Method
 		myFirstCake.getLayers();
+		// invokes the setFlavor Method
 		myFirstCake.setFlavor("bob");
+		// invokes the getFLavor Method
 		myFirstCake.getFlavor();
+		// invokes the incLayer Method
 		myFirstCake.incLayer();
+		// invokes the tellIfTasty Method 
 		myFirstCake.tellIfTasty();
 
 
