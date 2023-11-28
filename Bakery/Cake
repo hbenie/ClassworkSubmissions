@@ -1,0 +1,42 @@
+
+/*
+ * this class gives this cake its qualities 
+ */
+public class Cake {
+	String flavor = new String("Mango");
+	int layers = this.layers;
+	static int inc = 1;
+	/*
+	 * creates an object named cake that requires a 
+	 */
+public Cake(String flavor, int layers) {
+	this.flavor=flavor;
+	this.layers= layers;
+}
+/*
+ * this method prints out the flavor of your cake, which is whatever you added to the actual perameter for the cake method
+ */
+public void getFlavor() {
+	System.out.println("This cake tastes like " + this.flavor);
+}
+/*
+ * this method prints out how many layers this cake has according to whatever int you set it to in the original cake method 
+ */
+public  void getLayers() {
+	System.out.println("This cake has " + this.layers + " layers");
+}
+/*
+ * this requires a string input for the actual perameter that then changes the old flavor to whatever the user inputs 
+ * once this method is ran, the newflavor is set to whatever you put it as and you can call on getFlavor to check it. 
+ */
+public void setFlavor(String newFlavor) {
+	flavor= newFlavor;
+}
+public static void tellIfTasty() {
+	System.out.println("The cake is yummy");
+}
+public void incLayer() {
+	this.layers= this.layers + inc;
+	System.out.println("This cake has " + this.layers + " layers");
+}
+}
