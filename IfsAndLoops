@@ -1,0 +1,74 @@
+import java.util.Scanner;
+public class Ifs_and_Loops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner num = new Scanner(System.in);
+int x = num.nextInt();
+int y = num.nextInt();
+printEvenOrOdd(x, y);
+printExpTable(x, y);	
+System.out.print("The value of the factorial is " + getFact(x));
+}
+
+	
+
+	
+	
+
+
+
+	private static void printExpTable(int x, int y) {
+		// TODO Auto-generated method stub
+		if (x<0 || y<0) {
+			System.out.println("Sorry I dont know that yet.");
+		}
+		else {
+	
+			for(int i=0; i<=y; i++) 
+	
+
+				
+				System.out.println(x + " to the " + i + " is " +  Math.pow(x, i));
+			
+					
+		}
+	}
+
+
+
+	private static void printEvenOrOdd(int x, int y) {
+		// TODO Auto-generated method stub
+		if((x%2==0)&(y%2==0)) {
+			System.out.println(x + " and " + y +"are even");
+		}
+		else if (( x%2==0)&(y%2!=0)) {
+			System.out.println(x + " is an even number, and " + y  + " is an odd number");
+		}
+		else if ((x%2!=0)&(y%2==0)) {
+			System.out.println(x + " is an odd number, and " + y  + " is an even number");
+
+		}
+		else {
+			System.out.println(x + " and " + y +"are odd");
+
+		}
+		
+	}
+	private  static int getFact(int x) {
+		// TODO Auto-generated method stub
+		if (x<0) {
+			System.out.println("Sorry, that won't work for the factorial calculator!");
+			return -1;
+		}
+		else {
+			
+		int num = 1;
+			for (int i =1; i<=x; i++)
+			num *=i;
+
+		return num;
+	
+		}
+}
+}
