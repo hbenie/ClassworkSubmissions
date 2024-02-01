@@ -1,0 +1,70 @@
+
+//import scanner
+import java.util.Scanner;
+
+public class dice 
+{
+
+	public static void main(String[] args) 
+	{
+
+		//instantiate scanner
+		Scanner number = new Scanner(System.in);
+		
+		//get the string using what was passed through the scanner
+		String str = number.nextLine();
+		
+		//declares an int x and assigns it the index of 'd'
+		int x = str.indexOf('d');
+		
+		//creates a string 'one' and sets it to everything before the index of d
+		String one = str.substring(0,x);
+		
+		//creates a string 'two' and assigns it everything after the index of d 
+		String two= str.substring(x + 1, str.length());
+		
+		//declares an int y and assigns it the value of the first string
+		int y= Integer.valueOf(one);
+		
+		//declares an int z and assigns it the value of the second string
+		int z= Integer.valueOf(two);
+		
+		//prints out y and z 
+		System.out.println("The first number is " + y + " the second number is " + z );
+		
+		//calls method and gives it ints y and z
+		rollDice(y, z);
+	}
+
+/*
+ * this method prints out the amount of times a dice is rolled specified by the user
+ *  and gets their sum
+ */
+	private static void rollDice(int y, int z)
+	{
+		// declares int o = 0 
+		int o= 0;
+		
+		// declares int b = 0 
+		int b= 0;
+		
+		//creates a loop that loops for the amount of dice there are 
+		for(int i=1; i<=y; i++)
+		{
+		
+			// generates a random number determined by the amount of sides on the dice and assigns it to o 
+			o = ((int)(Math.random()*z+1));
+		
+			//adds o to b 
+			b+=o;
+			
+			//prints out each roll
+			System.out.println(o);
+		}
+		//prints out how many dice, how many sides, and the sum of each roll
+		System.out.println("Rolling " + y + " dice with " + z + " sides you get " + b );
+	}
+	
+	
+}
+
