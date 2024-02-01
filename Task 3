@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class dicenumberscnner 
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+		//scans the user input 
+		Scanner number = new Scanner(System.in);
+
+		//creates a string called str assigning whatever is scanned
+		String str = number.nextLine();
+		
+		//calls on thing method and gives it the string str
+		thing(str);
+
+	}
+	
+	/*
+	 * this method prints out the amount of times a dice is rolled specified by the user
+	 * and gets their sum
+	 */
+	public static void thing(String str)
+	{
+
+	//find the d line using the numerical position of the d
+	int x = str.indexOf('d');
+	
+	//get the first number before the d
+	String one = str.substring(0,x);
+	
+	//get the second number after the d
+	String two= str.substring(x + 1, str.length());
+	
+	//declares an int y and assigns it the value of the first string
+	int y= Integer.valueOf(one);
+	
+	//declares an int z and assigns it the value of the second string
+	int z= Integer.valueOf(two);
+	
+	//prints out the numbers on the dice
+	
+	System.out.println("The first number is " + y + " the second number is " + z );
+	
+	//prints out the sum of the two numbers
+	System.out.println("The sum is " + (y+z) );
+	}
+
+}
