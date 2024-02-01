@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class task_5 
+{
+
+	public static void main(String[] args) 
+	{
+
+		//scans in a users input 
+		Scanner wrd = new Scanner(System.in);
+		
+		//creates a string = what was scanned 
+		String str = wrd.nextLine();
+		
+		//creates a blank string 
+		String nospce = "";
+		
+		//declares an int n = length of string 
+		int n = str.length();
+		
+		//loops for the entire length of a string
+		for (int i=0; i<n; i++) 
+		{
+			//if the current character is a space 
+			if (str.charAt(i)!= ' ')
+			{
+				// add it to the blank string 
+				nospce+=str.charAt(i);
+			}
+	
+		}
+		
+		// prints out new string 
+		System.out.print(nospce);
+
+	}
+}
+
+
+
+	
