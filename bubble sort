@@ -1,0 +1,93 @@
+
+public class Bubblesort {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+//declares an int randomNumbers = to the array returned by the method makrRandom()
+int[] randomNumbers= makeRandom();
+//declares an int nums = to the array returned by the method bubbleSort()
+int[] nums= bubbleSort(randomNumbers);
+//calls method to print new array 
+printArr(nums);
+	}
+	/*
+	 * this method prints out each element of an array just like it looks in an array 
+	 */
+	private static void printArr(int[] nums) 
+	{
+		// TODO Auto-generated method stub
+		int i = 0; 
+		System.out.print("{");
+
+		for(; i<nums.length; i++)
+		{
+			System.out.print(nums[i]);
+			
+			if(i!=nums.length-1) 
+			{
+				System.out.print(",");
+
+			}
+
+		}
+		System.out.println("}");
+
+	}
+
+/*
+ * this method creates an array and fills it with 2000 random ints, then returns the randomized array
+ */
+private static int[] makeRandom() 
+{
+		// declares an int array with 2000 elements 
+		int[] bigNums = new int[2000];
+		//declares an in set to the length of the array 
+		int len = bigNums.length;
+		//for loop that traverses the array 
+		for (int i = 0; i < len; i++)
+		{
+			//declares an int to a random integer
+			int randomNumber = (int) ((Math.random() * 1000) + 1);
+			//sets the element at index i to the random number just generated 
+			bigNums[i] = randomNumber;
+			
+		}
+		
+		return bigNums;
+		
+	}
+private static  int[] bubbleSort(int[] nums) 
+{
+	// TODO Auto-generated method stub
+	//loops the switching method so it keeps going through the array until its all sorted
+for(int j= 0; j<nums.length; j++)
+{
+	
+	//traverses the array  
+	for(int i= 0; i<nums.length-1; i++) 
+	{
+		//if the int at this index is > the int after it, swap the two 
+		if(nums[i]>nums[i+1])
+		{
+			int x = nums[i];
+			nums[i]=nums [i+1];
+			nums [i+1]= x;
+		}
+	}
+}
+//creates a new array with 2000 ints
+	int[]arr= new int [2000];
+	// traverses the whole array 
+	for (int i = 0; i <nums.length; i++)
+	{
+	//sets the int at this index in nthe new array = to the 
+		arr[i] = nums[i];
+		
+	}
+	// returns new array
+	 return arr;
+
+	}
+}
+
