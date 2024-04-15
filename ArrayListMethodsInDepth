@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+public class ArrayListMethodsInDepth {
+
+	public static void main(String[] args)
+	{
+		ArrayList <String> foods = new ArrayList<String>();
+		//adds apples to the array 
+		foods.add("Apples");
+		//adds bread to the array  
+		foods.add("Bread");
+		//adds cookies to the array 
+		foods.add("Cookies");
+		System.out.println(foods.size());
+		//prints out true, this method adds a new element to the array list, and will always print true when added 
+		System.out.println(foods.add("Dole Whip"));
+		//this method returns the length of the array list
+		System.out.println(foods.size());
+		//prints bread, this method changes an element at a specific index to the new element, and will return the element that got replaced
+		System.out.println(foods.set(1, "Butter"));
+		System.out.println(foods.size());
+		//prints cookies, this method removes the element at this index, and returns the element that it removed 
+		System.out.println(foods.remove(2));
+		System.out.println(foods.size());
+
+	}
+
+}
