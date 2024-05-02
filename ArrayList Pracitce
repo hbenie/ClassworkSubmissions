@@ -1,0 +1,75 @@
+import java.util.ArrayList;
+
+
+public class ArrayList_practice {
+
+	public static void main(String[] args) {
+		//declares an arraylist of integers
+		ArrayList <Integer> nums = new ArrayList<Integer>();
+		nums.add(1);
+		nums.add(5);
+		nums.add(3);
+		nums.add(4);
+		nums.add(2);
+		
+		//declares an arraylist of strings
+		ArrayList <String> names = new ArrayList<String>();
+		names.add("Bob");
+		names.add("Hayden");
+		names.add("Brogan");
+		names.add("Billy");
+		names.add("Jacob");
+		
+		
+		bubbleSortNumbers(nums);
+		bubbleSortStrings(names);
+
+	}
+/*
+ * is passed an ArrayList and bubble sorts it into alphabetical order. 
+ */
+	private static void bubbleSortStrings(ArrayList<String> names) {
+		//keeps looping through the entire array to make sure its sorted 
+		for(int j=0; j<names.size(); j++) 
+		{
+			//loops through the array that checks the values in array 
+			for(int i=0; i<names.size()-1; i++)
+			{
+			//checks to see if the string is in alphabetic order or not 
+				if(names.get(i).compareTo(names.get(i+1))>0) 
+				{
+					//swaps the 2 strings
+					String place=names.set(i, names.get(i+1));
+					names.set(i+1, place);	
+		}
+			}
+				}
+		//prints out arraylist names
+		System.out.print(names);
+
+	}
+	/*
+	 * is passed an ArrayList and bubble sorts it into numerical order
+	 */
+	private static void bubbleSortNumbers(ArrayList<Integer> nums) {
+		//keeps looping through the entire array to make sure its sorted 
+		for(int j=0; j<nums.size(); j++) 
+		{
+			//loops through array to arrange the values
+			for(int i=0; i<nums.size()-1; i++)
+			{
+				//checks to see if the integers are in numerical order
+				if(nums.get(i)>nums.get(i+1)) 
+				{
+				//swaps the 2 integers
+				Integer place=nums.set(i, nums.get(i+1));
+				nums.set(i+1, place);
+				
+		}
+			}
+				}
+		//prints out arraylist names
+		System.out.print(nums);
+	}
+
+}
