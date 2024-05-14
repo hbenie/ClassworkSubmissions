@@ -1,0 +1,63 @@
+
+public class insertionsort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//declares an array of ints
+		int[] arr= {2, 4, 6, 8, 5, 10, 12};
+		printArr(insertionSort(arr, arrayShifter(arr, 4)));
+		
+
+	}
+	/*
+	 * repeats arrayshifter for ever element in the array;
+	 */
+	private static int[] insertionSort(int[] arrayShifter, int[] arr) {
+		for(int i = 0; i<arr.length; i++ )
+		{
+		arrayShifter(arr, i);
+		}
+
+		return arr;
+	}
+	/*
+	 * take the last element and sort it into the right place
+	 */
+	private static int[] arrayShifter(int[] arr, int x) {
+	// loop that traverses the array 
+	while(x>0 && arr[x]<arr[x-1]) 
+	{
+		//swaps the element with the one before it until its in the right spot 
+				int temp= arr[x];
+				arr[x]= arr[x-1];
+				arr[x-1]= temp;
+				x--;
+			}
+		
+		return arr;
+	}
+	/*
+	 * prints out array 
+	 */
+	private static void printArr(int[] nums) 
+	{
+		int i = 0; 
+		System.out.print("{");
+
+		for(; i<nums.length; i++)
+		{
+			System.out.print(nums[i]);
+			
+			if(i!=nums.length-1) 
+			{
+				System.out.print(",");
+
+			}
+
+		}
+		System.out.println("}");
+
+	}
+
+
+}
